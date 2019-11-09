@@ -1,0 +1,103 @@
+.about {
+  position: relative;
+  padding: 2rem 3rem;
+  width: 40%;
+  background: $color-white;
+  border-radius: 6px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.7rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 2.5rem 4rem 0 rgba($color-black, 0.25),
+    0 0 0rem 60rem rgba($color-black, 0.45);
+  z-index: 1000;
+  overflow: hidden;
+  display: none;
+
+  @include respond(tab-port) {
+      width: 70%;
+  }
+
+  @include respond(phone) {
+    width: 85%;
+}
+
+  &::before {
+    content: "";
+    width: 80%;
+    height: 80%;
+    background: rgba($color-secondary, .10);
+    position: absolute;
+    top: -11rem;
+    left: -6rem;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    width: 90%;
+    height: 90%;
+    background: rgba($color-secondary, .05);
+    position: absolute;
+    top: -11rem;
+    left: -20rem;
+    border-radius: 50%;
+  }
+
+  .close {
+      position: absolute;
+      top: 3.1rem;
+      right: 3rem;
+      text-decoration: none;
+      font-size: 1.6rem;
+      background: linear-gradient($color-secondary, $color-secondary);
+      display: inline-block;
+      padding: 0px 1rem;
+      border-radius: 2px;
+      color: $color-white;
+      border: 2px solid darken($color-grey, 3%);
+      cursor: pointer;
+  }
+
+  h1 {
+    color: $color-secondary;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 6;
+
+    &::after {
+      content: "";
+      width: 55%;
+      height: 4px;
+      background: linear-gradient(to right, $color-secondary, transparent);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  p {
+    text-align: justify;
+    word-spacing: 1px;
+    line-height: 1.7;
+    font-size: 1.5rem;
+
+    b {
+        color: darken($color-secondary, 1%);
+        font-weight: 500;
+    }
+
+    a {
+        color: dodgerblue;
+    }
+  }
+}
+
+.about:target {
+    display: block;
+}

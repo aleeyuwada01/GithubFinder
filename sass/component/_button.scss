@@ -1,0 +1,22 @@
+.btn {
+    background: $color-grey;
+    padding: 1rem 3.5rem;
+    display: inline-block;
+    text-decoration: none;
+    color: lighten($color-black, 10%);
+    font-weight: 400;
+
+    &--start {
+        margin: 3rem 0 0 0;
+        background: $color-secondary;
+        border-radius: 6rem;
+        color: $color-grey;
+        box-shadow: 0 2rem 1rem -1.2rem rgba($color-secondary, .35);
+        transition: .35s;
+
+        &:hover {
+            opacity: .95;
+            box-shadow: 0 1rem 2rem -1rem rgba($color-secondary, .45);
+        }
+    }
+}

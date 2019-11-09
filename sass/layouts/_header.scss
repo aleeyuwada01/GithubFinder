@@ -1,0 +1,133 @@
+.header {
+    display: flex;
+    background: linear-gradient($color-primary, $color-primary-dark);
+    color: $color-white;
+
+    @include respond(tab-land) {
+        //
+    }
+
+    @include respond(tab-port) {
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .col-1 {
+        @extend %margin-top;
+        width: 55%;
+        font-size: 2rem;
+        padding-left: 9rem;
+
+        @include respond(tab-port) {
+            text-align: center;
+            padding: 0;
+            margin: 4rem auto;
+        }
+    }
+
+    .col-2 {
+        @extend %margin-top;
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    &__heading {
+        font-size: 7.5rem;
+        font-weight: 700;
+        text-shadow: 1px 1px 1px $color-black;
+
+        @include respond(tab-port) {
+            font-size: 5rem;
+        }
+
+        @include respond(phone) {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__desc {
+        text-shadow: 1px 1px 1px $color-black;
+
+        @include respond(phone) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__img {
+        width: 55%;
+        margin-top: -6rem;
+
+        @include respond(tab-port) {
+            width: 23%;
+        }
+
+        @include respond(phone) {
+            width: 50%;
+        }
+    }
+
+    &__github {
+        text-decoration: underline;
+        color: $color-grey;
+    }
+}
+
+.terms {
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    position: relative;
+    color: $color-black;
+    z-index: 1;
+
+    h1 {
+        color: $color-grey;
+        font-size: 3.5rem;
+        text-align: center;
+        font-weight: 300;
+        display: block;
+        margin: 6rem auto;
+    }
+}
+
+.section-terms {
+    position: relative;
+    background: $color-white;
+    border-radius: .5rem;
+    width: 50%;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    padding: 2.5rem 3rem;
+    border: 1px solid lighten($color-grey, 20%);
+    z-index: 10;
+    margin: auto;
+    margin-top: -30rem;
+    text-align: justify;
+
+    @include respond(tab-port) {
+        width: 75%;
+    }
+
+    @include respond(phone) {
+        width: 85%;
+    }
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    white-space: pre-line;
+    font-family: inherit;
+}
+
+.wrapper {
+    //
+}

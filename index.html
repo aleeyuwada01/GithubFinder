@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="github, repos" />
+    <meta name="author" content="aliyu wada" />
+    <meta
+      name="description"
+      content="Github finder is a website that connects you instantly with github users and their repos by just typing their username."
+    />
+    <title>Github Finder</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/github-icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Google+Sans:400,500|Open+Sans:300,400,600,700,800"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="nav__merge">
+        <div class="nav__brand-con">
+          <a href="index.html" class="nav__link">Github Finder</a>
+        </div>
+        <label for="navBtn" class="nav__mobile">
+          <span class="bars"></span>
+        </label>
+      </div>
+      <input type="checkbox" id="navBtn" />
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="#profile" class="nav__link">Search user</a>
+        <a href="http://www.github.com" target="_blank" class="nav__link"
+          >Github</a
+        >
+        <a href="#show" class="nav__link">About</a>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="col-1">
+        <h1 class="header__heading">Github Finder</h1>
+        <p class="header__desc">
+          <a
+            href="http://www.github.com"
+            title="what is github"
+            class="header__github"
+            >Github</a
+          >
+          finder is a website that
+          <b>connects you instantly with github users and their repos</b> by
+          just typing their username.
+        </p>
+
+        <a href="#profile" class="btn btn--start">Start now!</a>
+      </div>
+      <div class="col-2">
+        <img
+          src="img/github.svg"
+          alt="background picture"
+          class="header__img"
+        />
+      </div>
+    </header>
+
+    <section id="profile" class="section-profile">
+      <div class="profile">
+        <div class="profile__search-con">
+          <form>
+            <label id="label-search" for="search">
+              <input
+                type="search"
+                placeholder="Type username"
+                id="search"
+                class="profile__search sh-sm"
+              />
+              <img
+                src="img/github-icon.png"
+                class="profile__search-icon"
+                alt="github icon"
+              />
+            </label>
+          </form>
+        </div>
+        <div id="output">
+          <h1 class="result m-md" style="text-align: center;color: #ddd;">
+            Results will be displayed here
+          </h1>
+        </div>
+        <div class="repos"></div>
+      </div>
+    </section>
+
+    <div class="about" id="show">
+      <a href="#" class="close" title="close modal">&times;</a>
+      <h1>About me</h1>
+      <p>
+        My name is
+        <b
+          >aliyu wada i am a web Developer, Currently studying computer science
+          in ummaru musa yardua university katsina</b
+        >. I started coding when i was in grade 9, I decided on my own to start
+        developing open source project in order to help other developers out
+        there. I really enjoy programming to me i found essential as eating,
+        Eiether you die your are pretty meserable without programming. For more
+        information you can contact me via my email
+        <a href="mailTo:aleeyuwada01@gmail.com">aleeyuwada01@gmail.com</a>
+      </p>
+    </div>
+
+    <footer class="footer" dir="ltr">
+      <p>
+        Copyright &copy; 2019 Github Finder
+        <a href="terms.html" target="_blank">Open source</a>
+      </p>
+      <p>
+        <b>Version 1.0.0</b>
+        <a href="terms.html">Terms</a>
+      </p>
+    </footer>
+
+    <script src="js/github.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

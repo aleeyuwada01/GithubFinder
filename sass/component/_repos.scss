@@ -1,0 +1,62 @@
+.repos {
+    &__heading {
+        display: inline-block;
+        color: $color-secondary;
+        font-size: 3rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 30%;
+            height: 4px;
+            background: $color-secondary;
+        }
+    }
+
+    &__card {
+        width: 65%;
+        font-size: 1.7rem;
+        display: flex;
+        justify-content: space-between;
+
+        @include respond(tab-port) {
+            width: 100%;
+            font-size: 1.5rem;
+            flex-direction: column;
+        }
+    }
+
+    &__value {
+        color: $color-secondary;
+        font-weight: 500;
+    }
+
+    @mixin pd {
+        padding: 1.5rem 2rem;
+    }
+
+    &__fet {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__name {
+        background: $color-secondary;
+        color: $color-grey;
+        @include pd;
+    }
+
+    &__stars {
+        @include pd;
+    }
+
+    &__watchers {
+        @include pd;
+    }
+
+    &__forks {
+        @include pd;
+    }
+}

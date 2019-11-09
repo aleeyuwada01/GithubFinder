@@ -1,0 +1,267 @@
+.profile {
+  display: block;
+  margin-top: 0rem;
+  //height: 100vh;
+  background: lighten($color-grey, 1.2%);
+  padding: 7rem 11rem;
+
+  @include respond(tab-port) {
+    padding: 4rem 3rem;
+  }
+
+  @include respond(phone) {
+    padding: 4rem 2rem;
+  }
+
+  &__search-con {
+    width: 60%;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+      width: 75%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      margin: 2.3rem auto;
+    }
+  }
+
+  label {
+    position: relative;
+  }
+
+  &__search {
+    font-size: 1.7rem;
+    font-family: inherit;
+    width: 100%;
+    padding: 2rem 3rem;
+    border-radius: 6rem;
+    border: none;
+
+    &::-webkit-input-placeholder {
+      color: rgb(182, 182, 182);
+    }
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__search-icon {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &__details {
+    width: 100%;
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+
+  &__img-con {
+    width: 15rem;
+    height: 15rem;
+    background: #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid $color-grey;
+
+    @include respond(tab-port) {
+      width: 20rem;
+      height: 20rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    text-align: center;
+  }
+
+  &__followers-con {
+    margin-left: 6rem;
+    align-self: flex-start;
+
+    @include respond(tab-port) {
+      width: 50%;
+      margin: 3rem 0;
+      align-self: center;
+    }
+
+    @include respond(phone) {
+      width: 65%;
+    }
+  }
+
+  &__followers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__followers-count {
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .posts {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    @include respond(phone) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .text-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .button-group {
+    margin-top: 4rem;
+
+    a {
+      text-decoration: none;
+      color: lighten($color-black, 15%);
+      font-size: 1.5rem;
+
+      @include respond(phone) {
+        font-size: 1.3rem;
+      }
+    }
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-content: center;
+    }
+  }
+
+  &__show-profile,
+  &__view-repo {
+    border: none;
+    background: $color-grey;
+    border: 1px solid darken($color-grey, 20%);
+    padding: 1rem 3.5rem;
+    border-radius: 6rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+
+      &:not(:first-child) {
+        margin: 0;
+        margin-top: 1rem;
+      }
+    }
+
+    &:hover {
+      background: darken($color-grey, 6%);
+    }
+  }
+
+  &__view-repo {
+    margin-left: 2rem;
+
+    @include respond(tab-port) {
+      margin: 0;
+    }
+  }
+
+  &__about {
+    width: 100%;
+    flex: 1;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    @include respond(tab-port) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    ul {
+      list-style-type: none;
+
+      @include respond(tab-port) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    li {
+      margin-top: 0.5rem;
+
+      b,
+      .website {
+        color: lighten($color-black, 15%);
+      }
+    }
+
+    .bio {
+      width: 60%;
+
+      @include respond(tab-port) {
+        width: 70%;
+      }
+
+      @include respond(phone) {
+        width: 80%;
+      }
+    }
+  }
+}
+
+.result {
+  font-size: 3rem;
+
+  @include respond(phone) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.alert {
+  width: 95%;
+  padding: 1rem 2rem;
+  font-size: 1.7rem;
+  text-align: center;
+  color: $color-grey;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin: 1rem auto;
+}
+
+.error {
+  background: rgba(250, 0, 0, 0.5);
+  border: 1px solid rgba(250, 0, 0, 1);
+}

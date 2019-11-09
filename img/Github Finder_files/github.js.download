@@ -1,0 +1,20 @@
+class Github {
+  constructor() {
+    //Github url properties
+    this.client_id = "";
+    this.client_secret = "";
+  }
+
+  //Create the prototype method
+  async getUser(username) {
+    //Fetch the user
+    const profileResponse = await fetch(
+      `http://api.github.com/users/${username}`
+    );
+    const profile = await profileResponse.json();
+
+    return {
+      profile
+    };
+  }
+}
